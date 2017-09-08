@@ -1,0 +1,9 @@
+executables/ios executables/linux_Data executables/linux.x86 executables/linux.x86_64 executables/mac.app executables/troepfchen.apk executables/webgl executables/win_Data executables/win.exe
+.vs/
+*.csproj
+Library/
+*.sln
+*.userprefs
+executables/
+neutron_fission_yield/
+.collabignore
