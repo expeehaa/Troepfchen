@@ -13,22 +13,22 @@
         color: #5a5a5a;
       }
       .carousel {
+        margin-top: 1rem;
         margin-bottom: 4rem;
       }
       .carousel-caption {
         z-index: 10;
         bottom: 3rem;
       }
+      .carousel-caption > h1 {
+        color: #3a3a3a;
+      }
       .carousel-item {
-        height: 32rem;
         background-color: #777;
       }
       .carousel-item > img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        min-width: 100%;
-        height: 32rem;
+        position: relative;
+        width: 100%;
       }
       .featurette-divider {
         margin: 2rem 0;
@@ -81,38 +81,49 @@
       </div>
     </nav>
 
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-      <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-      </ol>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img class="first-slide" alt="First slide">
-          <!--<div class="container">
-            <div class="carousel-caption text-left">
-            </div>
-          </div>-->
-        </div>
-        <div class="carousel-item">
-          <img class="second-slide" alt="Second slide">
-        </div>
-        <div class="carousel-item">
-          <img class="third-slide" alt="Third slide">
-        </div>
-      </div>
-      <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div>
-
     <div class="container">
+      <div id="imgpreviewslider" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#imgpreviewslider" data-slide-to="0" class="active"></li>
+          <li data-target="#imgpreviewslider" data-slide-to="1"></li>
+          <li data-target="#imgpreviewslider" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./data/img1.png">
+            <div class="container">
+              <div class="carousel-caption">
+                <h1>Wasserstoff und U-235</h1>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="./data/img2.png">
+            <div class="container">
+              <div class="carousel-caption d-none d-md-block">
+                <h1>Spontanzerfall von Li-11</h1>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="./data/img3.png">
+            <div class="container">
+              <div class="carousel-caption d-none d-md-block text-right">
+                <h1>Neutroneninduzierte Kernspaltung von U-235</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#imgpreviewslider" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#imgpreviewslider" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+
       <div class="jumbotron">
         <h1>Features</h1>
         <ul>
@@ -158,7 +169,7 @@
           Offizielle Homepage vom Mono Project: <a href="http://www.mono-project.com/">http://www.mono-project.com/</a>
         </p>
         <p>
-          <a class="btn btn-primary btn-lg" href="https://github.com/expeehaa/troepfchen/releases" role="button">Download</a>
+          <a class="btn btn-primary btn-lg" href="https://github.com/expeehaa/troepfchen/releases/latest" role="button">Download</a>
         </p>
       </div>
 
