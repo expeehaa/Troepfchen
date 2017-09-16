@@ -48,18 +48,12 @@ public class Nuclide
 
     public static Nuclide FromString(string s)
     {
+        var split = s.Split('-');
         if (Regex.IsMatch(s.ToLower(), "(\\d+\\-\\d+)"))
-        {
-            var split = s.Split('-');
             return new Nuclide(int.Parse(split[0]), int.Parse(split[1]));
-        }
-        else if (Regex.IsMatch(s.ToLower(), "([a-z]+\\-\\d+)"))
-        {
-            var split = s.Split('-');
-            var nuclideEntry = NuclideCard.Nuclides.FirstOrDefault(n => n.ShortName.ToLower() == split[0].ToLower() && n.NucleonCount == int.Parse(split[1]));
-            return new Nuclide(nuclideEntry.ProtonCount, nuclideEntry.NeutronCount);
-        }
-        else return null;
+        if (!Regex.IsMatch(s.ToLower(), "([a-z]+\\-\\d+)")) return null;
+        var nuclideEntry = NuclideCard.Nuclides.FirstOrDefault(n => n.ShortName.ToLower().Equals(split[0].ToLower()) && n.NucleonCount == int.Parse(split[1]));
+        return nuclideEntry != null ? new Nuclide(nuclideEntry.ProtonCount, nuclideEntry.NeutronCount) : null;
     }
 
     public static bool IsNuclideString(string s)
@@ -84,8 +78,8 @@ public class Nuclide
         return entry.ShortName + "-" + entry.NucleonCount;
     }
 
-    public override bool Equals(object obj)
-    {
-        return ((Nuclide)obj).ProtonCount == ProtonCount && ((Nuclide)obj).NeutronCount == NeutronCount;
+    public override bool Equals(object obj) {
+        var nuclide = obj as Nuclide;
+        return nuclide != null && (nuclide.ProtonCount == ProtonCount && nuclide.NeutronCount == NeutronCount);
     }
 }

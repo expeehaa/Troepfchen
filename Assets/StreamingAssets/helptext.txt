@@ -1,0 +1,6 @@
+﻿<size=20><b>Tastenbelegung und Mausnutzung</b></size>
+w/a/s/d	<b>-</b> Vorwärts / Rückwärts / Links / Rechts
+esc <b>-</b> Fenster schließen
+Q + Maus über Kernlistenelement	<b>-</b> löschen
+Mausbewegung <b>-</b> Rotation des Sichtfeldes
+X <b>-</b> Maus einfangen / frei lassen
